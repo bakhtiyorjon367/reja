@@ -20,7 +20,7 @@ fs.readFile("database/user.json", "utf8", (err, data) =>{
     }
 });
 
-//express we server 4 bosqichi
+//express  server 4 bosqichi
 //#1 Kirish qismi                                          -->  expressga kirib kelyotgan malumotlarga bog'liq bo'lgan codelar yoziladi.
 app.use(express.static("public"));                      // -->  xar-qanday browserdan kirib kelyotgan zaproslar uchun "public folder" ochiq degan manoni anglatadi. (faqat public folderini ko'roladi )
 app.use(express.json());                               //  -->  kirib kelyotgan json formatidagi datani object xolatiga o'girib beradi.
@@ -35,10 +35,11 @@ app.set("view engine", "ejs");                     // --> view engin "ejs" ekanl
 
 
 //#4 Routing codes (Routerlarga mo'ljallangan)
-app.post("/create-item", (req, res) =>{              //malumotni o'zi bilan olib keladi va databsega yozadi
+app.post('/create_item', (req, res) =>{              //malumotni o'zi bilan olib keladi va databsega yozadi
     console.log(req.body);
     res.json({test:"success"});
 });
+
 
 app.get('/author', (req, res) => {
     res.render("author", {user: user} )
@@ -49,7 +50,43 @@ app.get("/", function (req, res) {                   //databasedan malumotni oli
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const server = http.createServer(app);                // --> serverni quirish. (createServer bir parametr qabul qiladi. Bu biz yasab olgan express app)
-const PORT = 3000;                                   //--> serverni malum bir portga listen qildirish 
+const PORT = 300;                                   //--> serverni malum bir portga listen qildirish 
 server.listen(PORT, function () {   
-    console.log(`The server is running succesfully on PORT ${PORT}`) }); // --> server muvoffaqiyatlik ishlasa bu console.log ishga tushadi                                                 
+    console.log(`The server is running succesfully on PORT: http://localhost${PORT}`) }); // --> server muvoffaqiyatlik ishlasa bu console.log ishga tushadi                                                 

@@ -1,7 +1,8 @@
 {
-    "name": "Steve", 
+    "name": "Ali", 
     "profession": "Software Engineer",
     "age": 27,
+    "freelance":"Avaliable",
     "residence":"S.Korea",
     "address": "S.Korea, Chuncheon",
     "languages": ["Uzbek","Korean","English"],
