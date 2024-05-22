@@ -1,6 +1,6 @@
 /*   Client va WebServerlar orasidagi data 'json' formatida 
      BSSR --> back-end server side rendering. traditional usul bo'lib, back-endda html yasab clientga jo'natish.
-     ejs  --> orqali HTML front-endni yasaladi back-endni ichida.
+     ejs  --> orqali back-endni ichida HTML front-endni yasaladi.
 */
 
 
@@ -46,41 +46,8 @@ app.get('/author', (req, res) => {
 });
 
 app.get("/", function (req, res) {                   //databasedan malumotni olish/o'qish uchun get ishlatiladi
-    res.render("harid");
+    res.render("reja");
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -89,4 +56,4 @@ app.get("/", function (req, res) {                   //databasedan malumotni oli
 const server = http.createServer(app);                // --> serverni quirish. (createServer bir parametr qabul qiladi. Bu biz yasab olgan express app)
 const PORT = 300;                                   //--> serverni malum bir portga listen qildirish 
 server.listen(PORT, function () {   
-    console.log(`The server is running succesfully on PORT: http://localhost${PORT}`) }); // --> server muvoffaqiyatlik ishlasa bu console.log ishga tushadi                                                 
+    console.log(`The server is running succesfully on PORT ${PORT}: http://localhost${PORT}`) }); // --> server muvoffaqiyatlik ishlasa bu console.log ishga tushadi                                                 
