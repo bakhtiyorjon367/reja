@@ -30,11 +30,13 @@ app.set("view engine", "ejs");                     // --> view engin "ejs" ekanl
 
 
 //#4 Routing codes (Routerlarga mo'ljallangan)
-app.post('/create_item', (req, res) =>{              //malumotni o'zi bilan olib keladi va databsega yozadi
+app.post('/create_item', (req, res) => {              //malumotni o'zi bilan olib keladi va databsega yozadi
+    console.log("User entered /create_item");
     console.log(req.body)
     const new_reja = req.body.reja;
-    db.collection("plans").insertOne({reja: new_reja}, (err, data)=>{
+    db.collection("plans").insertOne({reja: new_reja}, (err, data) => {
         if(err){
+            console.log(err);
             res.end("something went wrong");
         }else{
             res.end("successfully added");
@@ -43,7 +45,19 @@ app.post('/create_item', (req, res) =>{              //malumotni o'zi bilan olib
 });
 
 app.get("/", function (req, res) {                   //databasedan malumotni olish/o'qish uchun get ishlatiladi
-    res.render("reja");
+   console.log("User entered /");
+    db.collection("plans")
+    .find()
+    .toArray((err, data) => {
+        if(err){
+            console.log(err);
+            res.end("something went wrong");
+        }else{
+            res.render("reja",{items: data});
+
+        }
+    });
+    
 });
 
 module.exports = app;
