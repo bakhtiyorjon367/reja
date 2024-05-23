@@ -14,6 +14,7 @@ mongodb.connect(connectionString,
     else{
         console.log("mongodb connection succed");
         module.exports = client;
+
         
         const app = require("./app");
         const server = http.createServer(app);              
