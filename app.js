@@ -11,14 +11,6 @@ const res = require("express/lib/response");
 const app = express();
 
 
-// let user;
-// fs.readFile("database/user.json", "utf8", (err, data) =>{
-//     if(err){
-//         console.log("ERROR : ",err)
-//     }else{
-//         user=JSON.parse(data)
-//     }
-// });
 
 //MongoDB choqirish
 const db = require("./server").db();
@@ -39,19 +31,22 @@ app.set("view engine", "ejs");                     // --> view engin "ejs" ekanl
 
 //#4 Routing codes (Routerlarga mo'ljallangan)
 app.post('/create_item', (req, res) =>{              //malumotni o'zi bilan olib keladi va databsega yozadi
-   
+    console.log(req.body)
+    const new_reja = req.body.reja;
+    db.collection("plans").insertOne({reja: new_reja}, (err, data)=>{
+        if(err){
+            res.end("something went wrong");
+        }else{
+            res.end("successfully added");
+        }
+    });
 });
 
 app.get("/", function (req, res) {                   //databasedan malumotni olish/o'qish uchun get ishlatiladi
     res.render("reja");
 });
 
-
-app.get('/author', (req, res) => {
-    res.render("author", {user: user} )
-});
-
-
+module.exports = app;
 
 
 

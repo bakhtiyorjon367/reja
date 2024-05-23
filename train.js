@@ -1,3 +1,21 @@
+//MITask B
+let count = 0;
+function countNumber(a){
+    for(let i = 0; i<a.length; i++){
+        if (!isNaN(a[i])) 
+            count++;
+
+    
+    }return count;
+}
+
+const result = countNumber("ad2a54y79wet0sfgb9");
+console.log(result);
+
+
+
+
+
 // // MITask A
 // let count = 0;
 // function countLetter(a,b){
@@ -28,15 +46,15 @@
 
 
 
-console.log("Jack Ma maslahatlari");
-const list = [
-    "yaxshi talaba bo'ling",                    //0-20
-    "togri ustoz tanlang va koproq hato qiling",//20-30
-    "uzingizga ishlashingizni boshlang",        //30-40
-    "siz kuchli bolgan narlsalarni qiling",     //40-50
-    "yoshlarga investitsiya qiling",            //50-60
-    "endi dam oling, foydasi yoq",             //60
-];
+// console.log("Jack Ma maslahatlari");
+// const list = [
+//     "yaxshi talaba bo'ling",                    //0-20
+//     "togri ustoz tanlang va koproq hato qiling",//20-30
+//     "uzingizga ishlashingizni boshlang",        //30-40
+//     "siz kuchli bolgan narlsalarni qiling",     //40-50
+//     "yoshlarga investitsiya qiling",            //50-60
+//     "endi dam oling, foydasi yoq",             //60
+// ];
 
 
 
