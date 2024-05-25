@@ -11,11 +11,10 @@ mongodb.connect(connectionString,
     useUnifiedTopology: true,
   }, 
   (err, client) => {
-    if(err) console.log("ERROR");
+    if(err) console.log("ERROR on connection MongoDB");
     else{
         console.log("mongodb connection succed");
         module.exports = client;
-
 
         const app = require("./app");
         const server = http.createServer(app);              
@@ -23,5 +22,13 @@ mongodb.connect(connectionString,
         server.listen(PORT, function () {   
         console.log(`The server is running succesfully on PORT ${PORT}: http://localhost${PORT}`) }); 
     }
-
 } );
+
+
+
+
+
+
+
+
+
