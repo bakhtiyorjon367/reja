@@ -1,47 +1,73 @@
-//MITTask C
- const moment = require('moment');
-class Shop{
+//MITask D
 
-    constructor(non,lagmon,cola){
-        this.non = non;
-        this.lagmon = lagmon;
-        this.cola = cola;
 
-    }
 
-   qabul(name, value){
-        if(name==='non'){
-            this.non+=value;
-        }else if(name==='lagmon'){
-            this.lagmon+=value;
-        
-        }else if(name==='cola'){
-            this.cola+=value;
-        }else{
-            console.log("input is not valid");
+function izla(a,b){
+    if(a.length==b.length){
+        let temp = "";
+        for(let i = 0; i < a.length;  i++){
+            for(let j = 0; j<b.length; j++){
+                if(a[i]==b[j]){
+                    temp+=a[i];
+                    break;
+                }
+            }
         }
-   }
-   sotish(name,number){
-        if(name.length == 3){
-            this.non-=number;
-        }else if(name.length == 6){
-            this.lagmon-=number;
-        }else if(name.length == 4){
-            this.cola-=number;
-        }else{
-            console.log("input valid value");
-        }   
+    return true;
+    }else {
+        return false;
     }
-  qoldiq(){
-    const time = moment().format("HH:MM");
-    console.log(`hozir ${time}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud! `);
-   }
-};
-const shop = new Shop(4,5,2);
-shop.qoldiq();
-shop.sotish('non',3);
-shop.qabul('cola',4);
-shop.qoldiq();
+}
+const result = izla("mitgroup","gmtiprou");
+console.log(result);
+
+
+    // let array1 = a.split('');
+    // let array2 = b.split('');
+    
+//  const moment = require('moment');
+// class Shop{
+
+//     constructor(non,lagmon,cola){
+//         this.non = non;
+//         this.lagmon = lagmon;
+//         this.cola = cola;
+
+//     }
+
+//    qabul(name, value){
+//         if(name==='non'){
+//             this.non+=value;
+//         }else if(name==='lagmon'){
+//             this.lagmon+=value;
+        
+//         }else if(name==='cola'){
+//             this.cola+=value;
+//         }else{
+//             console.log("input is not valid");
+//         }
+//    }
+//    sotish(name,number){
+//         if(name.length == 3){
+//             this.non-=number;
+//         }else if(name.length == 6){
+//             this.lagmon-=number;
+//         }else if(name.length == 4){
+//             this.cola-=number;
+//         }else{
+//             console.log("input valid value");
+//         }   
+//     }
+//   qoldiq(){
+//     const time = moment().format("HH:MM");
+//     console.log(`hozir ${time}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud! `);
+//    }
+// };
+// const shop = new Shop(4,5,2);
+// shop.qoldiq();
+// shop.sotish('non',3);
+// shop.qabul('cola',4);
+// shop.qoldiq();
 
 
 
