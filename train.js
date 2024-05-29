@@ -1,25 +1,47 @@
+//MITask E
+
+function getReverse(a){
+    let temp = "";
+    for(i=a.length-1; i>=0; i--){
+        temp+=a[i];
+    }
+    return temp;
+
+}
+const b = getReverse('hello');
+console.log(b);
+
+
+
+
+
+
+
+
+
+
 //MITask D
 
 
 
-function izla(a,b){
-    if(a.length==b.length){
-        let temp = "";
-        for(let i = 0; i < a.length;  i++){
-            for(let j = 0; j<b.length; j++){
-                if(a[i]==b[j]){
-                    temp+=a[i];
-                    break;
-                }
-            }
-        }
-    return true;
-    }else {
-        return false;
-    }
-}
-const result = izla("mitgroup","gmtiprou");
-console.log(result);
+// function izla(a,b){
+//     if(a.length==b.length){
+//         let temp = "";
+//         for(let i = 0; i < a.length;  i++){
+//             for(let j = 0; j<b.length; j++){
+//                 if(a[i]==b[j]){
+//                     temp+=a[i];
+//                     break;
+//                 }
+//             }
+//         }
+//     return true;
+//     }else {
+//         return false;
+//     }
+// }
+// const result = izla("mitgroup","gmtiprou");
+// console.log(result);
 
 
     // let array1 = a.split('');
