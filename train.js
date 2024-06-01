@@ -1,28 +1,38 @@
+//MITask F
+
+function findDoublers(a){
+    for(let i=0; i<=a.length; i++){
+        for(let j=i+1; j<=a.length-1; j++ ){
+            if(a[i]==a[j]){
+                return true;
+            }
+        }           
+    }
+    return false;
+}
+const result = findDoublers('hello');
+console.log(result);
+//_________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+
 //MITask E
 
-function getReverse(a){
-    let temp = "";
-    for(i=a.length-1; i>=0; i--){
-        temp+=a[i];
-    }
-    return temp;
+// function getReverse(a){
+//     let temp = "";
+//     for(i=a.length-1; i>=0; i--){
+//         temp+=a[i];
+//     }
+//     return temp;
 
-}
-const b = getReverse('hello');
-console.log(b);
-
-
-
-
-
-
-
+// }
+// const b = getReverse('hello');
+// console.log(b);
+//_________________________________________________________________________________________________________________________________________________________________________________________________
 
 
 
 //MITask D
-
-
 
 // function izla(a,b){
 //     if(a.length==b.length){
@@ -42,19 +52,17 @@ console.log(b);
 // }
 // const result = izla("mitgroup","gmtiprou");
 // console.log(result);
+//_________________________________________________________________________________________________________________________________________________________________________________________________
 
 
-    // let array1 = a.split('');
-    // let array2 = b.split('');
-    
-//  const moment = require('moment');
+//MITask C
+
+// const moment = require('moment');
 // class Shop{
-
 //     constructor(non,lagmon,cola){
 //         this.non = non;
 //         this.lagmon = lagmon;
 //         this.cola = cola;
-
 //     }
 
 //    qabul(name, value){
@@ -80,9 +88,9 @@ console.log(b);
 //             console.log("input valid value");
 //         }   
 //     }
-//   qoldiq(){
-//     const time = moment().format("HH:MM");
-//     console.log(`hozir ${time}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud! `);
+//     qoldiq(){
+//         const time = moment().format("HH:MM");
+//         console.log(`hozir ${time}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud! `);
 //    }
 // };
 // const shop = new Shop(4,5,2);
@@ -90,12 +98,14 @@ console.log(b);
 // shop.sotish('non',3);
 // shop.qabul('cola',4);
 // shop.qoldiq();
+//_________________________________________________________________________________________________________________________________________________________________________________________________
 
 
 
 
 
 // //MITask B
+
 // let count = 0;
 // function countNumber(a){
 //     for(let i = 0; i<a.length; i++){
@@ -105,12 +115,14 @@ console.log(b);
 // }
 // const result = countNumber("ad2a54y79wet0sfgb9");
 // console.log(result);
+//_________________________________________________________________________________________________________________________________________________________________________________________________
 
 
 
 
 
 // // MITask A
+
 // let count = 0;
 // function countLetter(a,b){
 //         for(let i = 0; i<b.length; i++){
@@ -121,6 +133,7 @@ console.log(b);
 // }
 // const result = countLetter('e', 'engineer');
 // console.log(result);
+//_________________________________________________________________________________________________________________________________________________________________________________________________
 
 
 
