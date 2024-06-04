@@ -1,17 +1,35 @@
+//MITask G
+
+function getHighestIndex(a){
+    let max=a[0];
+    for(let i = 0; i<=a.length-1; i++){
+        for(let k = i+1; k<=a.length-1; k++){
+            if(max<a[k]){
+                max=a[k];
+            }
+        }
+    } const l =max.toString().split('');
+    
+    return l[1];
+ }
+const arr = [342,33,626,1,9,340]
+const result = getHighestIndex(arr);
+console.log(result);
+
 //MITask F
 
-function findDoublers(a){
-    for(let i=0; i<=a.length; i++){
-        for(let j=i+1; j<=a.length-1; j++ ){
-            if(a[i]==a[j]){
-                return true;
-            }
-        }           
-    }
-    return false;
-}
-const result = findDoublers('hello');
-console.log(result);
+// function findDoublers(a){
+//     for(let i=0; i<=a.length; i++){
+//         for(let j=i+1; j<=a.length-1; j++ ){
+//             if(a[i]==a[j]){
+//                 return true;
+//             }
+//         }           
+//     }
+//     return false;
+// }
+// const result = findDoublers('hello');
+// console.log(result);
 //_________________________________________________________________________________________________________________________________________________________________________________________________
 
 
